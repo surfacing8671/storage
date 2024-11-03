@@ -25,4 +25,3 @@ networks:
     - event: VibeClassProcessRemoved(address indexed classAddress)
     - event: VibeClassSingleAdded(address indexed classAddress)
     - event: VibeClassSingleRemoved(address indexed classAddress)
-rollback_on_reorg: false
