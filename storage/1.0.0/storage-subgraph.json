@@ -1,0 +1,18 @@
+{
+  "name": "storage/1.0.0",
+  "version": "1",
+  "abis": {
+    "storage": {
+      "path": "./abis/storage.json"
+    }
+  },
+  "instances": [
+    {
+      "abi": "storage",
+      "address": "0xfe3b282154e3d64EBd18A6C44894C41E00A0283C",
+      "startBlock": 20000000,
+      "chain": "pulsechain"
+    }
+  ],
+  "enableCallHandlers": true
+}

@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio-indexer
+networks:
+- id: 369
+  rpc_config:
+    url: https://rpc.pulsechain.com
+  start_block: 20000000
+  contracts:
+  - name: vibers
+    address:
+    - 0xfe3b282154e3d64EBd18A6C44894C41E00A0283C
+    handler: src/EventHandlers.ts
+    events:
+    - event: IncrementedUserVibe(address indexed userAddress, int256 amount)
+    - event: NewUser(address indexed userAddress)
+    - event: PendingRewardsUpdated(address indexed user, uint256 newPendingRewards)
+    - event: RemovedUserVibe(address indexed userAddress, address indexed classAddress)
+    - event: RewardClassAdded(address indexed classAddress)
+    - event: RewardClassRemoved(address indexed classAddress)
+    - event: UpdatedUserVibe(address indexed userAddress, address indexed classAddress, int256 newVibes)
+    - event: UserEpochRewardsUpdated(address indexed userAddress, uint256 epoch, uint256 rewards, address indexed lpAddress, int256 vibes)
+    - event: UserPaidOutRewards(address indexed user, uint256 paidOutRewards)
+    - event: UserTradeVolumeUpdated(address indexed userAddress, uint256 epoch, uint256 value, address indexed lpAddress, bool sell)
+    - event: VibeClassProcessAdded(address indexed classAddress)
+    - event: VibeClassProcessRemoved(address indexed classAddress)
+    - event: VibeClassSingleAdded(address indexed classAddress)
+    - event: VibeClassSingleRemoved(address indexed classAddress)
+rollback_on_reorg: false

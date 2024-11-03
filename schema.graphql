@@ -1,0 +1,84 @@
+type Vibers_IncrementedUserVibe {
+  id: ID!
+  userAddress: String!
+  amount: BigInt!
+}
+
+type Vibers_NewUser {
+  id: ID!
+  userAddress: String!
+}
+
+type Vibers_PendingRewardsUpdated {
+  id: ID!
+  user: String!
+  newPendingRewards: BigInt!
+}
+
+type Vibers_RemovedUserVibe {
+  id: ID!
+  userAddress: String!
+  classAddress: String!
+}
+
+type Vibers_RewardClassAdded {
+  id: ID!
+  classAddress: String!
+}
+
+type Vibers_RewardClassRemoved {
+  id: ID!
+  classAddress: String!
+}
+
+type Vibers_UpdatedUserVibe {
+  id: ID!
+  userAddress: String!
+  classAddress: String!
+  newVibes: BigInt!
+}
+
+type Vibers_UserEpochRewardsUpdated {
+  id: ID!
+  userAddress: String!
+  epoch: BigInt!
+  rewards: BigInt!
+  lpAddress: String!
+  vibes: BigInt!
+}
+
+type Vibers_UserPaidOutRewards {
+  id: ID!
+  user: String!
+  paidOutRewards: BigInt!
+}
+
+type Vibers_UserTradeVolumeUpdated {
+  id: ID!
+  userAddress: String!
+  epoch: BigInt!
+  value: BigInt!
+  lpAddress: String!
+  sell: Boolean!
+}
+
+type Vibers_VibeClassProcessAdded {
+  id: ID!
+  classAddress: String!
+}
+
+type Vibers_VibeClassProcessRemoved {
+  id: ID!
+  classAddress: String!
+}
+
+type Vibers_VibeClassSingleAdded {
+  id: ID!
+  classAddress: String!
+}
+
+type Vibers_VibeClassSingleRemoved {
+  id: ID!
+  classAddress: String!
+}
+
